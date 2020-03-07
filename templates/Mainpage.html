@@ -38,21 +38,32 @@
             }
             h2{
                 color: cornsilk;
-                text-align: center;
+                margin-left: 415px;
                 size: 12px;
             }
-            p{
+            .footer{
                 width: 100%;
                 height: 90px;
-                background-color: white;
+                background-color: aqua;
                 margin-bottom: 0%;
-                margin-top: 300px;
-                color: steelblue;
+                margin-top: 180px;
+                color:darkslategrey;
                 font-family: fantasy;
                 font-style: italic;
                 font-size: xx-large;
                 text-align: center;
                 padding-top: 45px;
+            }
+            #password{
+                margin-right: 20px;
+            }
+            #Name{
+                margin-left: 12px;
+            }
+            a{
+                color: lightslategray;
+                font-size: 25px;
+                margin-left: 505px;
             }
         </style>
         <title>Registration Form</title>
@@ -60,14 +71,17 @@
     <body>
         <h1 class="title">Sign Up Form</h1>
         <form action="/NextPage" class="form" method="POST">
-            <h3>Name <input type="text" name="Name" class="text-input" placeholder="Enter Your Name"></h3>
-            <h3>Email <input type="email" name="Email" placeholder="Enter Your Email" class="text-input"></h3>
+            <h3>Name <input type="text" name="Name" id="Name" class="text-input" placeholder="Enter Your Name"></h3>
+            <h3>password <input type="password" id="password" name="password" placeholder="Enter Your password" class="text-input"></h3>
             <input type="submit" name="submit" value="Submit">
         </form>
 
-        <a href="/login"><h2>Log in</h2></a>
+        <br><br><br>
 
-        <p>Creadits goes to Nihan Mahmud</p>
+        <h2>Already in keepnotesonline?</h2>
+        <a href="/login">Log in</a>
+
+        <p class="footer">Credits goes to Nihan Mahmud</p>
 
     </body>
 </html>

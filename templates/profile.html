@@ -53,6 +53,19 @@
                 color: burlywood;
                 text-align: center;
             }
+            .footer{
+                width: 100%;
+                height: 90px;
+                background-color: aqua;
+                margin-bottom: 0%;
+                margin-top: 245px;
+                color:darkslategrey;
+                font-family: fantasy;
+                font-style: italic;
+                font-size: xx-large;
+                text-align: center;
+                padding-top: 45px;
+            }
             </style>
     </head>
     <body>
@@ -61,22 +74,26 @@
         <label for="text">Write Note here : </label>
         <input type="text" name="text" placeholder="Your data">
         <br>
-        <label for="title">Note title</label>
+        <label for="title">Note title : </label>
         <input type="text" name="title" placeholder="Title">
         <input name="name" type="hidden" value={{username}}>
-        <input type="hidden" name="email" value={{email}}>
+        <input type="hidden" name="password" value={{password}}>
         <br>
         <br>
         <input type="submit" value="Submit" class="submit">
         </form>
         
+        <br>
+
         <form action="/profile/datamanager" method="POST" class="submit">
             <input type="hidden" value={{username}} name="username">
-            <input type="hidden" name="email" value={{email}}>
+            <input type="hidden" name="password" value={{password}}>
             <input type="submit" value="Your data">
         </form>
 
         <a href="/"><h2>Logout</h2></a>
+
+        <p class="footer">Credits goes to Nihan Mahmud</p>
 
     </body>
 </html>

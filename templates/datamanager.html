@@ -5,12 +5,35 @@
             body{
                 background-color: black;
             }
-            form{
+            .form{
                 width: 500px;
                 height: 150px;
                 margin: auto;
                 text-align: center;
                 background-color: brown;
+            }
+            .footer{
+                width: 100%;
+                height: 90px;
+                background-color: aqua;
+                margin-bottom: 0%;
+                margin-top: 200px;
+                color:darkslategrey;
+                font-family: fantasy;
+                font-style: italic;
+                font-size: xx-large;
+                text-align: center;
+                padding-top: 45px;
+            }
+            .submit{
+                color: darkturquoise;
+                border-color: darkslategrey ;
+                border-width: 2px;
+                border-style: solid;
+                margin-left: 600px;
+                width: 100px;
+                height: 50px;
+                margin-top: 50px;
             }
             h3{
                 color: aliceblue;
@@ -38,12 +61,20 @@
     <body>
         <h3>Your file list :</h3>
         <p>{{filelist}}</p>
-        <form action="/profile/datamanager/readdata" method="POST">
+        <form action="/profile/datamanager/readdata" method="POST" class="form">
             <h4>Write file name which you want to read : </h4>
             <input type="text" name="filename">
             <input type="hidden" value="{{username}}" name="username">
-            <input type="hidden" value="{{email}}" name="email">
-            <input type="submit">
+            <input type="hidden" value="{{password}}" name="password">
+            <input type="submit" value="Submit">
         </form>
+        <form action="/profile" method="POST" class="form2">
+            <input type="hidden" name="username" value={{username}}>
+            <input type="hidden" name="password" value={{password}}>
+            <input type="submit" value="Profile" class="submit">
+        </form>
+
+        <p class="footer">Credits goes to Nihan Mahmud</p>
+
     </body>
 </html>

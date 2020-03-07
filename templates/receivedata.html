@@ -20,19 +20,38 @@
                 width: 100px;
                 height: 50px;
             }
+            .footer{
+                width: 100%;
+                height: 90px;
+                background-color: aqua;
+                margin-bottom: 0%;
+                margin-top: 330px;
+                color:darkslategrey;
+                font-family: fantasy;
+                font-style: italic;
+                font-size: xx-large;
+                text-align: center;
+                padding-top: 45px;
+            }
         </style>
     </head>
     <body>
         <h3>Data received successfully!</h3>
+
+        <br><br>
+
         <form action="/profile/datamanager" method="POST">
         <input type="hidden" value={{name}} name="username">
-        <input type="hidden" name="email" value={{email}}>
+        <input type="hidden" name="password" value={{password}}>
         <input type="submit" value="Your all data" class="submit">
         </form>
         <form action="/profile" method="POST">
         <input type="hidden" name="username" value={{name}}>
-        <input type="hidden" name="email" value={{email}}>
+        <input type="hidden" name="password" value={{password}}>
         <input type="submit" value="Profile" class="submit">
         </form>
+
+        <p class="footer">Credits goes to Nihan Mahmud</p>
+
     </body>
 </html>
