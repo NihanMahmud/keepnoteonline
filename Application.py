@@ -11,5 +11,5 @@ info={}
 app=Flask(__name__)
 @app.route('/')
 def main():
-    return render_template('Mainpage.html')
+    return "Hello"
 app.run(debug=True)
